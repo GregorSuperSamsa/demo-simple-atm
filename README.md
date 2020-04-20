@@ -4,13 +4,13 @@ Demo code example for a simple ATM server
 # Filesystem is used as a persistent storage:
 * *Files should reside in the executable directory* * \
 **credentials** \
-- stores user accounts in format username:password, **should be manually created** \
+Stores user accounts in format username:password, **should be manually created** \
 **transfers**
-- stores pending and already closed transfers, **auto created at runtime** \
+Stores pending and already closed transfers, **auto created at runtime** \
 **user:password:history** \
-- stores history for the user session, **auto created at runtime** \
+Stores history for the user session, **auto created at runtime** \
 **user:password:balance** \
-- stores balance of the user account, **auto created at runtime**
+Stores balance of the user account, **auto created at runtime**
 
 # User access:
 Remote user access is via TCP (port **8889**)
