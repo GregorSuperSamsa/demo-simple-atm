@@ -11,7 +11,7 @@
 
 
 // Debug logging flag
-const bool dbg = true;
+const bool dbg = false;
 
 
 void Session::Run(int socket)

@@ -10,7 +10,7 @@
 
 
 // Debug logging
-const bool dbg = true;
+const bool dbg = false;
 
 
 const std::string Account::STORAGE_DELIMITER       = ":";
