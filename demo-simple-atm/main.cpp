@@ -8,6 +8,8 @@
 
 int main()
 {
+    std::cout << "Wellcome to simple ATM!" << std::endl;
+
     std::thread server_thread(&Server::Run, Server());
 
     Client client;

@@ -84,17 +84,27 @@ std::shared_ptr<CommandInterface> CommandProcessor::Parse(const std::string& inp
     // Split input by delimiter
     auto split = [&]()
     {
+        std::string s;
         std::vector<std::string> output;
         auto start = 0U;
         auto end = input.find(" ");
         while (end != std::string::npos)
         {
-            output.push_back(input.substr(start, end - start));
+            // Ignore empty strings
+            s = input.substr(start, end - start);
+            if (!s.empty())
+            {
+                output.push_back(s);
+            }
             start = end + delimiter.length();
             end = input.find(delimiter, start);
         }
-        output.push_back(input.substr(start, end));
-
+        // Ignore empty strings
+        s = input.substr(start, end);
+        if (!s.empty())
+        {
+            output.push_back(input.substr(start, end));
+        }
         return output;
     };
     params = split();
@@ -117,6 +127,8 @@ std::shared_ptr<CommandInterface> CommandProcessor::Parse(const std::string& inp
         else
             command = help;
     }
+    else
+        command = help;
 
     return command;
 }
