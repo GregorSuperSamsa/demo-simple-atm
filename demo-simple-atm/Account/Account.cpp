@@ -495,17 +495,17 @@ bool Account::ActivateSession(const std::string& username, const std::string& pa
 
     if (!HasActiveSession(username, password))
     {
+        this->username = username;
+        this->password = password;
+
         //
         std::unique_lock<std::mutex> locker(mutex_active_sessions, std::defer_lock);
         locker.lock();
-        active_sessions.push_back(USER_ID(username, password));
+        active_sessions.push_back(USER_ID());
         locker.unlock();
+
         //
-
         ScheduledTaskStart();
-
-        this->username = username;
-        this->password = password;
 
         result = true;
     }
