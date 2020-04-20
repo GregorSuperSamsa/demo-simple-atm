@@ -62,9 +62,6 @@ set( SOURCES
     Account/Account.h
     Account/Account.cpp
     #
-    Utils/MessageQueue.h
-    Utils/SynchFile.h
-    Utils/SynchFile.cpp
     Utils/Debug.h
     )
 
