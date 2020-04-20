@@ -2,10 +2,10 @@
 Demo code example for a simple ATM server
 
 # Filesystem is used as a persistent storage:
-* *Files should reside in the executable directory* * \
+* *Files should reside in the executable directory* *
 **credentials** \
 Stores user accounts in format username:password, **should be manually created** \
-**transfers**
+**transfers** \
 Stores pending and already closed transfers, **auto created at runtime** \
 **user:password:history** \
 Stores history for the user session, **auto created at runtime** \
