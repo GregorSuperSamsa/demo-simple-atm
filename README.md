@@ -2,7 +2,7 @@
 Demo code example for a simple ATM server
 
 # Persistent storage
-* *Files should reside in the executable directory* * \
+(Files should reside in the executable directory) \
 **credentials** \
 Stores user accounts in format username:password, **should be manually created** \
 **transfers** \
