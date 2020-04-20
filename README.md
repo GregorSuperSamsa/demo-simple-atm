@@ -19,4 +19,4 @@ deposit   - Deposit amount, as a whole number only, to your account: deposit amo
 withdraw  - Withdraw amount, as a whole number only, from your account: withdraw amount \
 transfer  - Transfer amount, as a whole number only, to another user account: transfer amount username (receiver) \
 history   - Show list of previous actions \
-help      - Show help \
+help      - Show help
